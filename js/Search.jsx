@@ -1,7 +1,11 @@
 import React from 'react';
+import ShowCard from './ShowCard';
+import preload from '../data.json';
 
 const Search = () => (
-  <h1>Hi lol this is search</h1>
+  <div className="search">
+    {preload.shows.map(show => <ShowCard show={show} />)}
+  </div>
 );
 
 export default Search;
